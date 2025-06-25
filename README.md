@@ -41,4 +41,4 @@ Welcome to the repository for my personal portfolio website! This is where I sho
     npm run dev
     ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Open [http://localhost:3000] in your browser
