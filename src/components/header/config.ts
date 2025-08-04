@@ -33,7 +33,7 @@ const links: Link[] = [
   // },
   {
     title: 'Blogs',
-    href: '/blogs',
+    href: 'https://medium.com/@shushankpawar664',
     thumbnail: '/assets/nav-link-previews/blog.png',
   },
   {
