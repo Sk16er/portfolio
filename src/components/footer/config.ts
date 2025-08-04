@@ -1,7 +1,7 @@
 const footer: { title: string; href: string }[] = [
   {
     title: "Blog",
-    href: "/blogs",
+    href: "https://medium.com/@shushankpawar664",
   },
   {
     title: "Newsletter",
