@@ -10,63 +10,55 @@ import "@splidejs/react-splide/css";
 
 const PROJECTS = [
   {
-    id: 1,
-    name: "Vero",
-    description: `Vero stands for virtual hero this is a LLM which you can use locally and this have 120k+ downloads on ollama `,
-    link: "https://ollama.com/shushank/vero",
+    id: "aeline-models",
+    name: "Aeline (Ollama Models)",
+    description:
+      "Published 4 fine-tuned models on Ollama including a 2B+ vision model and uncensored LLM variants, accumulating ~390K total pulls.",
+    link: "https://ollama.com/aeline",
+    repo: "https://github.com/Sk16er",
     images: [
-      "/assets/projects-screenshots/Vero/1.png",
-      "/assets/projects-screenshots/Vero/2.png",
-      "/assets/projects-screenshots/Vero/3.png",
-      "/assets/projects-screenshots/Vero/4.png",
-      "/assets/projects-screenshots/Vero/5.png",
+      "/assets/projects-screenshots/aeline-models/aeline-thumbnail.png",
+      "/assets/projects-screenshots/aeline-models/aeline-1.png",
+      "/assets/projects-screenshots/aeline-models/aeline-2.png",
     ],
   },
   {
-    id: 2,
-    name: "stock bot",
-
-    description: `StockBot Powered by Groq: Lightning Fast AI Chatbot that Responds With Live Interactive Stock Charts,
-     Financials, News, Screeners, and More`,
-    link: "https://stockbot-powered-by-groq-flame.vercel.app/",
+    id: "nano-hope",
+    name: "Nano-HOPE",
+    description:
+      "Unofficial 51M-parameter implementation of Google DeepMind's HOPE architecture with a self-modifying memory core.",
+    link: "https://colab.research.google.com/drive/1IXCZadJB14pqA5d5tgGo3UzQ2B_DTnyR?usp=sharing",
+    repo: "https://github.com/Sk16er/hope_nano",
     images: [
-      "/assets/projects-screenshots/StockBot/1.png",
-      "/assets/projects-screenshots/StockBot/2.png",
-      "/assets/projects-screenshots/StockBot/3.png",
-      "/assets/projects-screenshots/StockBot/4.png",
+      "/assets/projects-screenshots/nano-hope/hope_nano-thumbnail.png",
+      "/assets/projects-screenshots/nano-hope/hope_nano-1.png",
+      "/assets/projects-screenshots/nano-hope/hope_nano-2.png",
     ],
   },
   {
-    id: 3,
-    name: "Studio",
-    description: `ai recipy is ai powered recipy generator, which helps you to generate recipies based on your input.
-    It uses google gemini 2.5 flash model to generate recipies based on your input.`,
-    link: "https://studiorecipy.vercel.app/",
+    id: "shelby",
+    name: "Shelby",
+    description:
+      "AI-powered terminal assistant that translates natural language into shell commands with a 3-tier safety system.",
+    link: "",
+    repo: "https://github.com/Sk16er/shelby",
     images: [
-      "/assets/projects-screenshots/studio/1.png",
-      "/assets/projects-screenshots/studioy/2.png",
-      "/assets/projects-screenshots/studio/3.png",
-      "/assets/projects-screenshots/studio/4.png",
-      "/assets/projects-screenshots/studio/5.png",
+      "/assets/projects-screenshots/shelby/shelby-thumbnail.png",
+      "/assets/projects-screenshots/shelby/shelby-1.png",
+      "/assets/projects-screenshots/shelby/shelby-2.png",
     ],
   },
   {
-    id: 4,
-    name: "discord keylogger",
-    description: `A keylogger is a type of surveillance software that has the capability to record every keystroke you make on your computer or mobile device.
-This project is a simple keylogger that logs your keystrokes and sends them to a discord webhook.`,
-    link: "/projects/keylogger",
-    images: ["/assets/projects-screenshots/keylogger/1.png"],
-  },
-  {
-    id: 5,
-    name: "youtube app maker",
-    description: `Create your own YouTube app with this simple tool. Just enter your YouTube API key and you can create your own YouTube app.`,
-    link: "https://youtube-app-maker.vercel.app/",
+    id: "f1_prdt",
+    name: "F1 Race Winner Predictor",
+    description:
+      "ML system using a Transformer Encoder to predict F1 race winners by modeling all grid drivers as a sequence, with interpretable attention heatmaps.",
+    link: "https://github.com/sk16er/f1_prdt",
+    repo: "https://github.com/Sk16er/f1_prdt",
     images: [
-      "/assets/projects-screenshots/youtube-app-maker/1.png",
-      "/assets/projects-screenshots/youtube-app-maker/2.png",
-      "/assets/projects-screenshots/youtube-app-maker/3.png",
+      "/assets/projects-screenshots/f1_prdt/f1_prdt-thumbnail.png",
+      "/assets/projects-screenshots/f1_prdt/f1_prdt-1.png",
+      "/assets/projects-screenshots/f1_prdt/f1_prdt-2.png",
     ],
   },
 ];
@@ -75,10 +67,10 @@ function Page() {
     <>
       <div className="container mx-auto md:px-[50px] xl:px-[150px] text-zinc-300 h-full">
         <h1 className="text-4xl mt-[100px] mb-[50px]">Projects</h1>
-        <ul className="grid  md:grid-cols-2 lg:grid-cols-3 gap-10 place-content-around ">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 place-content-around ">
           {PROJECTS.map((project) => (
             <li
-              className="w-[300px] h-[400px] border-[.5px] rounded-md border-zinc-600"
+              className="w-full h-[420px] border-[.5px] rounded-md border-zinc-600 overflow-hidden"
               key={project.id}
               style={{ backdropFilter: "blur(2px)" }}
             >
@@ -101,10 +93,9 @@ function Page() {
                       <Image
                         src={image}
                         alt={`screenshot of "${project.name}`}
-                        className="w-[300px] h-[200px] rounded-md bg-zinc-900 "
-                        width={300}
-                        height={400}
-                        style={{ height: "200px" }}
+                        className="w-full h-48 object-cover rounded-md bg-zinc-900"
+                        width={600}
+                        height={320}
                       />
                     </SplideSlide>
                   ))}

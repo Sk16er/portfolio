@@ -235,290 +235,214 @@ export type Project = {
   live: string;
 };
 const projects: Project[] = [
+  // ─── NEW PROJECTS ────────────────────────────────────────────────────────────
   {
-    id: "Vero",
-    category: "LLM",
-    title: "Vero",
-    src: "/assets/projects-screenshots/Vero/logo.png",
-    screenshots: ["logo.png"],
+    id: "nano-hope",
+    category: "AI / Research",
+    title: "Nano-HOPE",
+    src: "/assets/projects-screenshots/nano-hope/hope_nano-thumbnail.png",
+    screenshots: [
+      "hope_nano-thumbnail.png",
+      "hope_nano-1.png",
+      "hope_nano-2.png",
+    ],
+    live: "https://colab.research.google.com/drive/1IXCZadJB14pqA5d5tgGo3UzQ2B_DTnyR?usp=sharing",
+    github: "https://github.com/Sk16er/hope_nano",
     skills: {
-      frontend: [
-        
-      ],
-      backend: [
-        
-      ],
+      frontend: [],
+      backend: [PROJECT_SKILLS.python],
     },
-    live: "https://ollama.com/shushank/Vero",
-    github: "https://github.com/sk16er/Vero",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono text-2xl text-center">
-            Vero = Gemini + fun of shushank
+            Unofficial implementation of Google DeepMind&apos;s HOPE architecture
           </TypographyP>
-          <TypographyP className="font-mono ">
-            This Have ** 120,000 + ** downloads , and  The fine tune version of Gemini 4b which you can use
-            locally, it is a llm which you can use for your own purpose, it is
-            fine tuned on my own data, and it is a very powerful llm which can run on single gpu,
-            it is a very fast and powerful llm.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Problems </TypographyH3>
-          <p className="font-mono mb-2">
-            Run locally on your meachine just use ollama and run shushank/Vero
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/Vero/2.png`,
-              `${BASE_PATH}/Vero/4.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">What it can do</TypographyH3>
-          <p className="font-mono mb-2">
-            it can so waht ever you want, like:
-            write a para boom done. and many more boundry is imagination.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/Vero/1.png`,
-              `${BASE_PATH}/Vero/3.png`,
-              `${BASE_PATH}/Vero/4.png`,
-            ]}
-          />
-
-     
-        </div>
-      );
-    },
-  },
-  {
-    id: "Studio",
-    category: "food",
-    title: "Ai recipy maker",
-    src: "/assets/projects-screenshots/studio/1.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png", "5.png"],
-    live: "https://studiorecipy.vercel.app/",
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.chakra,
-        PROJECT_SKILLS.vue,
-      ],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.prisma,
-        PROJECT_SKILLS.postgres,
-        PROJECT_SKILLS.docker,
-      ],
-    },
-    get content(): JSX.Element {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            This is the ai recipy app to make ai recipy
+          <TypographyP className="font-mono">
+            Nano-HOPE is a 51M-parameter model built from the HOPE research paper. Unlike standard
+            Transformers, it uses a Self-Modifying Titans Core that updates its own weights at
+            inference time via the Delta Rule — allowing it to learn dynamically from context
+            rather than relying solely on static attention. Trained on the TinyStories dataset
+            with cosine scheduling and gradient clipping. Earned 36+ stars on GitHub.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <p className="font-mono mb-2 mt-4">
-            As soon as you land, boom! You&apos;re greeted with the food
-            coupons and top-tier food that&apos;ll make your tummy happy.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/studio/1.png`]} />
-          <TypographyH3 className="my-4 ">Stores</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Architecture</TypographyH3>
           <p className="font-mono mb-2">
-            love the food.
+            The core TitansL2 layer maintains a memory matrix that evolves with each token using
+            learnable forget and write rates — solving the capacity bottleneck of standard linear
+            attention. Surrounding it, Continuum Memory System (CMS) blocks operate at different
+            timescales to capture long-range structure.
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/studio/1.png`,
-              `${BASE_PATH}/studioy2.png`,
+              `${BASE_PATH}/nano-hope/hope_nano-1.png`,
+              `${BASE_PATH}/nano-hope/hope_nano-2.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Categories</TypographyH3>
-
+          <TypographyH3 className="my-4 mt-8">Stateful Inference</TypographyH3>
           <p className="font-mono mb-2">
-            Whatever you&apos;re craving, we&apos;ve got it covered. From
-            mouthwatering pizzas to delectable desserts, our categories make it.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/couponluxury/2.png`]} />
-          <TypographyH3 className="my-4 mt-8">Custom CMS </TypographyH3>
-          <p className="font-mono mb-2">
-            And the cherry on top? I built a custom CMS that lets you manage
-            everything with ease. Add new stores, update categories, and keep
-            the content fresh without breaking a sweat.
+            Unlike Transformers that reprocess the full context, HOPE passes a compact memory
+            state forward — making generation efficient and truly stateful across tokens.
           </p>
           <SlideShow
-            images={[
-              `${BASE_PATH}/studio/1.png`,
-              `${BASE_PATH}/studio/2.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 mt-5">
-            With a sleek design and smooth animations, navigating through the
-            site is a breeze. It&apos;s like having your own personal food
-            paradise at your fingertips.
-          </p>
-          <p className="font-mono mb-2">
-            So, whether you&apos;re a foodie looking for the latest deals or just
-            someone who loves good food, this site is your go-to destination.
-            Get ready to indulge in a culinary adventure like no other!
-          </p>
-          {/* <TypographyP className="my-4 mt-8">
-          <strong>Misc:</strong>
-          Hosted not one, not two, but THREE coding contests (Codemacha) during
-          college. Safe to say, Coding Ducks passed the vibe check.
-        </TypographyP>
-        <TypographyP className="my-4 mt-8">
-          <strong>Target Audience:</strong>
-          For all the novice coders out there ready to make their mark.
-        </TypographyP> */}
-        </div>
-      );
-    },
-  },
-  {
-    id: "Youtube app maker",
-    category: "Creative",
-    title: "Make app for youtube",
-    src: "/assets/projects-screenshots/youtube/2.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png"],
-    github: "github.com/sk16er/youtube-app-maker",
-    live: "https://youtube-app-maker.vercel.app/",
-    
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.aceternity,
-        PROJECT_SKILLS.tailwind,
-      ],
-      backend: [PROJECT_SKILLS.node,PROJECT_SKILLS.firebase],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            this is the youtube app maker, which helps you to make your own youtube app.
-            It uses aceternity to generate the app, and tailwind css for the styling.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <p className="font-mono mb-2 mt-8">
-            With the YouTube App Maker, you can create your own YouTube app in
-            minutes. Just enter your channel name, and the app will generate a
-            fully functional YouTube app for you.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/the-booking-desk/landing.png`]} />
-          <TypographyH3 className="my-4 mt-8">Blogs</TypographyH3>
-          <p className="font-mono mb-2">
-            The app is built with Next.js and Chakra UI, making it fast and
-            responsive. It also uses Aceternity to generate the app, so you can
-            be sure that your app is unique and one-of-a-kind.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/youtube/2.png`,
-              `${BASE_PATH}/youtube/3.png`,
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Sanity CMS</TypographyH3>
-
-          <p className="font-mono mb-2">
-            The app also comes with a custom CMS that allows you to manage your
-            content easily. You can add, edit, and delete your content without
-            any hassle. The CMS is built with Sanity, so you can be sure that
-            your content is secure and reliable.
-          </p>
-          <SlideShow
-            images={[
-              `${BASE_PATH}/youtube/1.png`,
-              `${BASE_PATH}/youtube/2.png`,
-            ]}
-          />
-          <p className="font-mono mb-2 my-8">
-            So, whether you&apos;re a content creator looking to showcase your
-            work or just someone who loves exploring new apps, this YouTube App
-            Maker is your go-to solution. Get ready to dive into the world of
-            YouTube with your very own app!
-          </p>
-        </div>
-      );
-    },
-  },
-  {
-    id: "StockBot",
-    category: "Finance",
-    title: "StockBot",
-
-    src: "/assets/projects-screenshots/StockBot/5.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png"],
-    live: "https://github.com/Sk16er/stockbot-powered-by-groq",
-    github:"https://github.com/Sk16er/stockbot-powered-by-groq",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.chakra],
-      backend: [PROJECT_SKILLS.supabase],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            GStockBot is an AI-powered chatbot that leverages Llama3 70b on Groq, Vercel’s AI SDK,
-             and TradingView live widgets to respond in conversation with live, interactive charts and interfaces 
-             specifically tailored to your requests. Groq's speed makes tool calling and providing a response near 
-             instantaneous, allowing for a sequence of two API calls with separate specialized prompts to return a response.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/StockBot/1.png`,
-              `${BASE_PATH}/StockBot/2.png`,
-              `${BASE_PATH}/StockBot/3.png`,
-              `${BASE_PATH}/StockBot/4.png`,
-            ]}
+            images={[`${BASE_PATH}/nano-hope/hope_nano-thumbnail.png`]}
           />
         </div>
       );
     },
   },
   {
-    id: "Discrd key logger",
-    category: "hacking",
-    title: "key logger",
-    src: "/assets/projects-screenshots/keylogger/1.png",
- 
-    screenshots: ["1.png"],
-    live: "https://github.com/sk15er/Discord_keylogger",
+    id: "shelby",
+    category: "Developer Tools",
+    title: "Shelby",
+    src: "/assets/projects-screenshots/shelby/shelby-thumbnail.png",
+    screenshots: ["shelby-thumbnail.png", "shelby-1.png", "shelby-2.png"],
+    live: "https://pypi.org/project/shelby-ai",
+    github: "https://github.com/Sk16er/shelby",
     skills: {
       frontend: [],
-      backend: [
-        PROJECT_SKILLS.python,
-      ],
+      backend: [PROJECT_SKILLS.python],
     },
     get content() {
       return (
         <div>
-          <TypographyP className="font-mono ">
-            The Discord Keylogger is a Python-based tool that records user keystrokes and periodically sends 
-            them, along with screenshots, to a specified Discord channel via a webhook. This project serves as a 
-            demonstration of potential security vulnerabilities and underscores the importance of robust cybersecurity practices.
+          <TypographyP className="font-mono text-2xl text-center">
+            Natural language → shell commands, safely.
+          </TypographyP>
+          <TypographyP className="font-mono">
+            Shelby is a safety-first AI terminal assistant that translates plain English into
+            executable shell commands. Before anything runs, it explains what the command does
+            and classifies its risk into one of three tiers: SAFE, CAUTION, or DANGER — with
+            escalating confirmation requirements to prevent accidents.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/keylogger/1.png`]} />
-          <TypographyH3 className="my-4 mt-8">
-            ahck anyone
-          </TypographyH3>
-          {/* Effortless Results Retrieval: */}
-          <ul className="the exe file">
-            <li className="font-mono">
-              this also have a exe file became a startup file by own and 
-              sends the screen shots and many more.
-            </li>
-            <li className="font-mono">
-              <strong>Note:</strong> This project is intended for educational purposes only. 
-              Unauthorized use of keyloggers is illegal and unethical.  
-            </li>
-          </ul>
+          <TypographyH3 className="my-4 mt-8">Safety System</TypographyH3>
+          <p className="font-mono mb-2">
+            Every generated command is classified before execution. SAFE commands run on Enter,
+            CAUTION requires a &apos;y&apos; confirmation, and DANGER commands make you retype
+            the command name — making destructive operations hard to run by accident.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/shelby/shelby-1.png`,
+              `${BASE_PATH}/shelby/shelby-2.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
+          <p className="font-mono mb-2">
+            Supports OpenAI, Anthropic, Gemini, and local models via Ollama. Includes an
+            interactive REPL with memory across turns, pipe mode, semantic history search,
+            command explanation, and a fix mode that analyzes failed commands and suggests
+            corrections.
+          </p>
+          <SlideShow
+            images={[`${BASE_PATH}/shelby/shelby-thumbnail.png`]}
+          />
+        </div>
+      );
+    },
+  },
+  {
+    id: "f1-predictor",
+    category: "Machine Learning",
+    title: "F1 Race Winner Predictor",
+    src: "/assets/projects-screenshots/f1_prdt/f1_prdt-thumbnail.png",
+    screenshots: ["f1_prdt-thumbnail.png", "f1_prdt-1.png", "f1_prdt-2.png"],
+    live: "https://github.com/Sk16er/f1_prdt",
+    github: "https://github.com/Sk16er/f1_prdt",
+    skills: {
+      frontend: [],
+      backend: [PROJECT_SKILLS.python],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            Predicting F1 winners with a Transformer — and showing its reasoning.
+          </TypographyP>
+          <TypographyP className="font-mono">
+            Instead of treating drivers independently, this system models an entire F1 starting
+            grid as a sequence. A Transformer Encoder uses self-attention to evaluate each
+            driver&apos;s attributes — age, championship standings, constructor performance —
+            relative to every other competitor on the grid simultaneously.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Attention Heatmaps</TypographyH3>
+          <p className="font-mono mb-2">
+            By reading the attention weights at inference time, the model generates interpretable
+            heatmaps that show exactly which competitors influenced each prediction — making the
+            output explainable, not just accurate.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/f1_prdt/f1_prdt-1.png`,
+              `${BASE_PATH}/f1_prdt/f1_prdt-2.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">CLI Interface</TypographyH3>
+          <p className="font-mono mb-2">
+            A Rich-powered CLI lets you run interactive predictions by selecting year and race,
+            outputs a ranked probability table in the terminal, and saves the attention heatmap
+            as an image. Training runs with a single command.
+          </p>
+          <SlideShow
+            images={[`${BASE_PATH}/f1_prdt/f1_prdt-thumbnail.png`]}
+          />
+        </div>
+      );
+    },
+  },
+  {
+    id: "aeline-models",
+    category: "AI / Open Source",
+    title: "Aeline — Ollama Models",
+    src: "/assets/projects-screenshots/aeline-models/aeline-thumbnail.png",
+    screenshots: [
+      "aeline-thumbnail.png",
+      "aeline-1.png",
+      "aeline-2.png",
+    ],
+    live: "https://ollama.com/aeline",
+    github: "https://github.com/Sk16er",
+    skills: {
+      frontend: [],
+      backend: [PROJECT_SKILLS.python],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            390,000+ pulls across 4 published models on Ollama.
+          </TypographyP>
+          <TypographyP className="font-mono">
+            A collection of fine-tuned and customized LLMs published under the aeline namespace
+            on Ollama — ranging from a 2B+ parameter vision model to uncensored variants of
+            Llama 3 and the Dolphin family. Built for local inference, all models run on a
+            single GPU.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Models</TypographyH3>
+          <p className="font-mono mb-2">
+            <strong>opan</strong> — Highly specialized vision model with 2B+ parameters
+            (147K pulls). <strong>halo</strong> — Uncensored Llama 3 variant (113K pulls).{" "}
+            <strong>phil</strong> — Uncensored Dolphin family model (92K pulls).{" "}
+            <strong>Omega</strong> — Small fine-tuned vision model for training experiments
+            (36K pulls).
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/aeline-models/aeline-1.png`,
+              `${BASE_PATH}/aeline-models/aeline-2.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Run Locally</TypographyH3>
+          <p className="font-mono mb-2">
+            Any model in the collection can be pulled and run with a single Ollama command.
+            No cloud dependency, no API key — just local inference on your own hardware.
+          </p>
+          <SlideShow
+            images={[`${BASE_PATH}/aeline-models/aeline-thumbnail.png`]}
+          />
         </div>
       );
     },
