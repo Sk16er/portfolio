@@ -1,44 +1,74 @@
-# [🚀 My Portfolio Website](https://shushank.site)
+# Shushank's Portfolio
 
-Welcome to the repository for my personal portfolio website! This is where I showcase my skills, projects, and a bit of my personality through jaw-dropping 3D animations, slick interactions, and fluid motion.
+Source code for my personal portfolio website, built to showcase projects, technical skills, and ongoing work in software engineering, machine learning, and web development.
 
-## 🛠️ Tech Stack
+**Live Site:** https://shushank.site
 
-- **Frontend**: Next.js, React, Tailwind CSS, Shadcn, Aceternity UI
-- **Animations**: GSAP, Framer Motion, Spline Runtime
-- **Misc**: Resend, Socketio, Zod
+## Tech Stack
 
-## 🚀 Getting Started
+### Frontend
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
+* Aceternity UI
+
+### Animation & Interaction
+
+* GSAP
+* Framer Motion
+* Spline Runtime
+
+### Backend & Utilities
+
+* Resend
+* Socket.IO
+* Zod
+
+## Local Development
 
 ### Prerequisites
 
-- Node.js (v14+)
-- npm or yarn
+* Node.js
+* npm or Yarn
 
 ### Installation
 
-1. Clone the repository:
+Clone the repository:
 
-    ```bash
-    git clone https://github.com/sk15er/portfolio.git
-    ```
+```bash
+git clone https://github.com/Sk16er/portfolio.git
+cd portfolio
+```
 
-2. Navigate to the project directory:
+Install dependencies:
 
-    ```bash
-    cd portfolio
-    ```
+```bash
+npm install
+```
 
-3. Install dependencies:
+Start the development server:
 
-    ```bash
-    npm install
-    ```
+```bash
+npm run dev
+```
 
-4. Run the development server:
+Open:
 
-    ```bash
-    npm run dev
-    ```
+```text
+http://localhost:3000
+```
 
-5. Open [http://localhost:3000] in your browser
+## Features
+
+* Responsive design
+* Interactive UI and animations
+* Project showcase section
+* Skills and experience overview
+* Contact integration
+* SEO optimization
+
+# thanks
+Thanks to [naresh khatri](https://github.com/Naresh-Khatri) the orignal creater for this Here is his [reppo](https://github.com/Naresh-Khatri/3d-portfolio/) i edited this for my use case.. thanks naresh
