@@ -296,7 +296,7 @@ const projects: Project[] = [
     category: "Developer Tools",
     title: "Shelby",
     src: "/assets/projects-screenshots/shelby/shelby-thumbnail.png",
-    screenshots: ["shelby-thumbnail.png", "shelby-1.png", "shelby-2.png"],
+    screenshots: ["shelby-thumbnail.png", "shelby-1.gif", "shelby-2.gif"],
     live: "https://pypi.org/project/shelby-ai",
     github: "https://github.com/Sk16er/shelby",
     skills: {
@@ -324,8 +324,8 @@ const projects: Project[] = [
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/shelby/shelby-1.png`,
-              `${BASE_PATH}/shelby/shelby-2.png`,
+              `${BASE_PATH}/shelby/shelby-1.gif`,
+              `${BASE_PATH}/shelby/shelby-2.gif`,
             ]}
           />
           <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
@@ -347,7 +347,7 @@ const projects: Project[] = [
     category: "Machine Learning",
     title: "F1 Race Winner Predictor",
     src: "/assets/projects-screenshots/f1_prdt/f1_prdt-thumbnail.png",
-    screenshots: ["f1_prdt-thumbnail.png", "f1_prdt-1.png", "f1_prdt-2.png"],
+    screenshots: ["f1_prdt-thumbnail.png", "f1_prdt-1.gif", "f1_prdt-2.png"],
     live: "https://github.com/Sk16er/f1_prdt",
     github: "https://github.com/Sk16er/f1_prdt",
     skills: {
@@ -375,7 +375,7 @@ const projects: Project[] = [
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/f1_prdt/f1_prdt-1.png`,
+              `${BASE_PATH}/f1_prdt/f1_prdt-1.gif`,
               `${BASE_PATH}/f1_prdt/f1_prdt-2.png`,
             ]}
           />

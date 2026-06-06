@@ -44,8 +44,8 @@ const PROJECTS = [
     repo: "https://github.com/Sk16er/shelby",
     images: [
       "/assets/projects-screenshots/shelby/shelby-thumbnail.png",
-      "/assets/projects-screenshots/shelby/shelby-1.png",
-      "/assets/projects-screenshots/shelby/shelby-2.png",
+      "/assets/projects-screenshots/shelby/shelby-1.gif",
+      "/assets/projects-screenshots/shelby/shelby-2.gif",
     ],
   },
   {
